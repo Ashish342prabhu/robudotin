@@ -1,5 +1,10 @@
 {% extends "layout.html" %}
 {% block home %}
     {% include "hero.html" %}
-    
+    {% include "category.html" %}
+    <div id="popup" class="popup">
+        <p id="popup-text"></p>
+    </div>
+    {% include "featuredProduct.html" %}
+    {% include "review.html" %}
 {% endblock home %}
