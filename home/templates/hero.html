@@ -7,7 +7,7 @@
 </style>
 <div class="flex md:flex-row flex-col px-20 ">
     <div class="md:w-fit w-full bg-custom bg-cover bg-center  flex items-center justify-center p-2"
-         style="background-image: url('{% static 'images/bg-image-1.jpg' %}')">
+        style="background-image: url('{% static 'images/bg-image-1.jpg' %}')">
         <div class="text-white text-center">
             <div class="mb-4">
                 <h1 class="text-2xl font-bold tracking-wider">FAST</h1>
@@ -42,73 +42,81 @@
         <div class="w-full max-w-4xl overflow-hidden relative">
             <div id="carousel" class="carousel-inner flex">
                 <div class="w-full flex-shrink-0">
-                    <img src="{% static 'images/image1.webp' %}"
-                         class="w-full object-center"
-                         width="800"
-                         height="400"
-                         alt="Image 1">
+                    <img src="{% static 'images/image1.webp' %}" class="w-full object-center" width="800" height="400"
+                        alt="Image 1">
                 </div>
                 <div class="w-full flex-shrink-0">
-                    <img src="{% static 'images/image2.webp' %}"
-                         class="w-full"
-                         width="800"
-                         height="400"
-                         alt="Image 2">
+                    <img src="{% static 'images/image2.webp' %}" class="w-full" width="800" height="400" alt="Image 2">
                 </div>
                 <div class="w-full flex-shrink-0">
-                    <img src="{% static 'images/image3.webp' %}"
-                         class="w-full"
-                         width="800"
-                         height="400"
-                         alt="Image 3">
+                    <img src="{% static 'images/image3.webp' %}" class="w-full" width="800" height="400" alt="Image 3">
                 </div>
                 <div class="w-full flex-shrink-0">
-                    <img src="{% static 'images/image4.webp' %}"
-                         class="w-full"
-                         width="800"
-                         height="400"
-                         alt="Image 4">
+                    <img src="{% static 'images/image4.webp' %}" class="w-full" width="800" height="400" alt="Image 4">
                 </div>
                 <div class="w-full flex-shrink-0">
-                    <img src="{% static 'images/image5.webp' %}"
-                         class="w-full"
-                         width="800"
-                         height="400"
-                         alt="Image 5">
+                    <img src="{% static 'images/image5.webp' %}" class="w-full" width="800" height="400" alt="Image 5">
                 </div>
                 <div class="w-full flex-shrink-0">
-                    <img src="{% static 'images/image6.webp' %}"
-                         class="w-full"
-                         width="800"
-                         height="400"
-                         alt="Image 6">
+                    <img src="{% static 'images/image6.webp' %}" class="w-full" width="800" height="400" alt="Image 6">
                 </div>
                 <div class="w-full flex-shrink-0">
-                    <img src="{% static 'images/image7.webp' %}"
-                         class="w-full"
-                         width="800"
-                         height="400"
-                         alt="Image 7">
+                    <img src="{% static 'images/image7.webp' %}" class="w-full" width="800" height="400" alt="Image 7">
                 </div>
             </div>
         </div>
     </div>
 </div>
 <script>
-    document.addEventListener('DOMContentLoaded', function() {
-        const carousel = document.getElementById('carousel');
-        const totalImages = carousel.children.length;
-        let index = 0;
 
-        function slideCarousel() {
+    document.addEventListener('DOMContentLoaded', function () {
+        function initCarousel(carouselId) {
+          const carousel = document.getElementById(carouselId);
+          const images = carousel.children;
+          const totalImages = images.length;
+      
+          // Clone first and last images for smooth looping
+          const firstImageClone = images[0].cloneNode(true);
+          const lastImageClone = images[totalImages - 1].cloneNode(true);
+          carousel.appendChild(firstImageClone);
+          carousel.insertBefore(lastImageClone, images[0]);
+      
+          let index = 1; // Start from the first actual image
+          const totalItems = totalImages + 2; // Include cloned images
+      
+          function slideCarousel() {
             index++;
-            if (index >= totalImages) {
-                index =0;
-            }
             const translateX = -index * 100;
+            carousel.style.transition = 'transform 0.5s ease-in-out';
             carousel.style.transform = `translateX(${translateX}%)`;
+      
+            // Looping logic
+            if (index >= totalItems - 1) {
+              setTimeout(() => {
+                carousel.style.transition = 'none';
+                index = 1;
+                carousel.style.transform = `translateX(-${index * 100}%)`;
+              }, 500); // Delay to match transition duration
+            }
+      
+            if (index <= 0) {
+              setTimeout(() => {
+                carousel.style.transition = 'none';
+                index = totalItems - 2;
+                carousel.style.transform = `translateX(-${index * 100}%)`;
+              }, 500); // Delay to match transition duration
+            }
+          }
+      
+          setInterval(slideCarousel, 3000); // Change slide every 3 seconds
+      
+          // Initial positioning
+          carousel.style.transform = `translateX(-${index * 100}%)`;
         }
+      
+    
 
-        setInterval(slideCarousel, 3000); // Change slide every 3 seconds
-    });
+        initCarousel('carousel');
+      });
+      
 </script>
