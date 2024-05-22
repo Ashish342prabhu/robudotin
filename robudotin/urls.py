@@ -19,11 +19,11 @@ from django.urls import path,include
 from home.views import *
 from robudotin.settings import DEBUG, STATIC_URL, BASE_DIR
 import os
+from django.conf.urls.static import static
+from django.conf import settings
 urlpatterns = [
     path('', home, name='home'),
     path('admin/', admin.site.urls),
     path("__reload__/", include("django_browser_reload.urls")),
 ]
-if DEBUG:
-    from django.conf.urls.static import static
-    urlpatterns += static(STATIC_URL, document_root=os.path.join(BASE_DIR, "static"))
+urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
