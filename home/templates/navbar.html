@@ -1,17 +1,17 @@
 {% load static %}
 <header class="bg-gray-100">
     <div class="flex flex-col md:flex-row justify-between py-2 px-4 md:px-10">
-        <div class="flex justify-center md:justify-start mb-2 md:mb-0">
-            <span>1800 266 6123 |</span>
-            <span>Customer Support</span>
+        <div class="flex  justify-start mb-2 md:mb-0">
+            <span>1800 266 6123 |&nbsp;</span>
+            <span> Customer Support</span>
         </div>
-        <div class="flex justify-center md:justify-end gap-2 md:gap-5">
+        <div class="flex justify-between  items-center md:justify-end  gap-5">
             <div>
                 <span><a href="#accounts">My Orders</a> |</span>
                 <span><a href="#accounts">Track your order</a> |</span>
                 <span><a href="#accounts">My Account</a></span>
             </div>
-            <div class="flex gap-2 md:gap-5">
+            <div class="flex justify-center md:justify-start gap-2 md:gap-5">
                 <a href="#facebook"><i class="ri-facebook-fill">|</i></a>
                 <a href="#linkedin"><i class="ri-instagram-fill">|</i></a>
                 <a href="#youtube"><i class="ri-linkedin-box-fill">|</i></a>
@@ -21,18 +21,18 @@
         </div>
     </div>
 </header>
-<nav>
-    <div class="flex flex-wrap items-center px-4 py-4 gap-4 bg-white text-gray-900">
-        <div class="logo">
+<nav class="bg-blue-950 sm:bg-white p-2">
+    <div class="flex flex-wrap items-center px-4 py-4 gap-4  text-gray-900 ">
+        <div class="logo order-2 sm:order-1">
             <img src="{% static 'images/logo.webp' %}"
                  alt="Logo"
                  class="h-10 md:h-14 w-auto"
                  width=" " height=" ">
         </div>
-        <div class="flex items-center ml-auto md:hidden">
+        <div class="flex items-center sm:ml-auto md:hidden order-1 sm:order-2 text-white sm:text-gray-900">
             <i class="ri-menu-line text-2xl cursor-pointer"></i>
         </div>
-        <div class="hidden md:flex items-center w-full md:w-auto gap-4 flex-grow">
+        <div class="flex  items-center w-full md:w-auto gap-4 flex-grow order-3">
             <input type="text"
                    placeholder="Search for Products"
                    class="w-full md:w-2/4 px-4 py-2 rounded-full border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500">
@@ -47,54 +47,54 @@
                     class="text-2xl bg-blue-900 text-white p-2 px-5 rounded-full focus:outline-none focus:ring-2 focus:ring-blue-500">
                 <i class="ri-search-line"></i>
             </button>
-            <div class="flex items-center gap-4 text-2xl md:text-3xl">
+            <div class="flex items-center gap-4 text-2xl md:text-3xl absolute top-24  right-10 sm:static  ">
                 <button type="button"
-                        class="text-gray-600 hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                        class="text-white hover:text-gray-200 sm:text-gray-600 sm:hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-blue-500">
                     <i class="ri-heart-line"></i>
                 </button>
                 <button type="button"
-                        class="text-gray-600 hover:text-gray-900 flex items-center space-x-1 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                        class="text-white hover:text-gray-200 sm:text-gray-600 sm:hover:text-gray-900 flex items-center space-x-1 focus:outline-none focus:ring-2 focus:ring-blue-500">
                     <i class="ri-shopping-cart-line"></i>
                     <span class="text-lg font-medium">₹0.00</span>
                 </button>
             </div>
         </div>
     </div>
-    <ul class="text-black text-[10px] md:text-sm flex flex-wrap gap-2 md:gap-10 px-4 md:px-20 items-center justify-center md:justify-start">
-        <li class="md:text-xl text-sm text-white bg-blue-900 p-2 rounded-t-lg">
+    <ul class="text-white sm:text-black text-[10px] md:text-sm flex flex-wrap gap-2 md:gap-10 px-4 md:px-20 items-center justify-center md:justify-start">
+        <li class="hidden sm:block md:text-xl text-sm text-white bg-blue-900 p-2 rounded-t-lg">
             <a href="#allcatagories">All Categories <i class="ri-menu-line"></i></a>
         </li>
-        <li>
+        <li class="border-white p-1 border-2 sm:border-none sm:p-0  rounded-lg">
             <a href="#home">Home</a>
         </li>
-        <li>
+        <li class="border-white p-1 border-2 sm:border-none sm:p-0  rounded-lg">
             <a href="#about-us">Shop now</a>
         </li>
-        <li>
+        <li class="border-white p-1 border-2 sm:border-none sm:p-0  rounded-lg">
             <a href="#new-arrivals">New Arrivals</a>
         </li>
-        <li>
+        <li class="border-white p-1 border-2 sm:border-none sm:p-0  rounded-lg">
             <a href="#services">Services</a>
-        </li>
-        <li>
+        </li class="border-white p-1 border-2 sm:border-none sm:p-0  rounded-lg">
+        <li class="border-white p-1 border-2 sm:border-none sm:p-0  rounded-lg">
             <a href="#bulk-enquiry">Bulk Enquiry</a>
-        </li>
-        <li>
+        </li class="border-white p-1 border-2 sm:border-none sm:p-0  rounded-lg">
+        <li class="border-white p-1 border-2 sm:border-none sm:p-0  rounded-lg">
             <a href="#blogs">Blogs</a>
-        </li>
-        <li class="bg-blue-900 rounded-lg p-2 text-white">
-            <a href="#careers" class="flex items-center rounded-2xl">
-                <img width="30"
-                     height="30"
+        </li class="border-white p-1 border-2 sm:border-none sm:p-0  rounded-lg">
+        <li class="bg-blue-950 rounded-lg  text-white border-white p-1 border-2 sm:border-none sm:p-0 ">
+            <a href="#careers" class="flex items-center ">
+                <img width="20"
+                     height="20"
                      src="https://img.icons8.com/ios-glyphs/30/FFFFFF/graduation-cap--v1.png"
-                     alt="graduation-cap--v1" />
+                     alt="graduation-cap--v1" />&nbsp;
                 <p>Careers</p>
             </a>
         </li>
-        <li>
+        <li class="border-white p-1 border-2 sm:border-none sm:p-0 rounded-lg  ">
             <a href="#faq">FAQ</a>
         </li>
-        <li class="bg-blue-900 rounded-lg p-2 text-white">
+        <li class="bg-blue-950 rounded-lg  text-white border-white p-1 border-2 sm:border-none sm:p-0  ">
             <a href="#sell">Sell on Robu</a>
         </li>
     </ul>

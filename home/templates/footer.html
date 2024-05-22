@@ -1,20 +1,29 @@
 {% load static %}
 <footer class="bg-gray-100">
   <div class="bg-indigo-600 text-white py-4 ">
-    <div class="max-w-6xl  sm:px-1 flex flex-col sm:flex-row  items-center gap-2 mx-auto">
-      <img width="30" height="30" src="https://img.icons8.com/ios/50/FFFFFF/paper-plane--v1.png" alt="paper-plane--v1" />
-      <h3 class="text-xl  md:text-nowrap">Subscribe to our Newsletter</h3>
-      <p class="md:mr-10 md:text-nowrap">to get promotional offers & discounts</p>
-      <div class="flex flex-col sm:flex-row  text-black items-center gap-4">
-        <input type="text" placeholder="First Name" class="sm:px-4 py-2 rounded-md focus:outline-none">
-        <input type="email" placeholder="Email ID" class="sm:px-4 py-2 rounded-md focus:outline-none">
+    <div class=" flex flex-col   items-center gap-2 mx-auto lg:flex-row md:justify-between md:px-8">
+      <div class="flex flex-col md:flex-row items-center  gap-2 ">
+        <img width="30"
+             height="30"
+             src="https://img.icons8.com/ios/50/FFFFFF/paper-plane--v1.png"
+             alt="paper-plane--v1" />
+        <h3 class="text-xl  md:text-nowrap">Subscribe to our Newsletter</h3>
+        <p class="md:mr-10 md:text-nowrap">to get promotional offers & discounts</p>
+      </div>
+      <div class="flex flex-col text-black items-center gap-4 sm:flex-row sm:flex-wrap  ">
+        <input type="text"
+               placeholder="First Name"
+               class="sm:px-4 py-2 rounded-md focus:outline-none">
+        <input type="email"
+               placeholder="Email ID"
+               class="sm:px-4 py-2 rounded-md focus:outline-none">
         <button class="bg-white text-indigo-600 px-2 sm:px-4 py-2 rounded-md sm:text-lg text-sm">Subscribe</button>
       </div>
     </div>
   </div>
-  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-    <div class="flex justify-between gap-10 sm:flex-row flex-col">
-      <div class="w-full sm:w-auto flex flex-col items-center sm:items-start mb-4 sm:mb-0 sm:order-none order-10">
+  <div class="mx-auto md:mx-10 px-4 sm:px-6 md:px-2 lg:px-8 py-8">
+    <div class="flex justify-between  gap-10 lg:gap-20 lg:flex-row flex-col">
+      <div class="w-full  flex flex-col items-center sm:w-auto sm:items-start mb-4 sm:mb-0 lg:order-none order-10">
         <img src="{% static 'images/logo.webp' %}" alt="Robu.in Logo" class="w-80">
         <p class="mt-2 text-gray-600 text-center sm:text-left">
           Got Questions? Call us between 9:15 AM to 6:15 PM
@@ -30,10 +39,13 @@
           <a href="#" class="text-gray-500 hover:text-gray-700"><i class="ri-linkedin-fill"></i></a>
         </div>
       </div>
-      <div class="w-full sm:w-auto flex flex-col gap-4 sm:space-y-0 sm:flex-row sm:space-x-8">
-        <div class="flex flex-col space-y-2 bg-gray-200 sm:bg-white text-left p-4 mx-8 rounded-md">
-          <h4 class="text-gray-800 font-semibold">Information
-            <button type="button" class="toggler sm:hidden"><i class="ri-arrow-down-double-line"></i></button>
+      <div class="w-full  flex flex-col gap-4 sm:justify-center sm:gap-3 sm:w-auto sm:space-y-0 sm:flex-row sm:flex-wrap md:flex-nowrap">
+        <div class="flex flex-col space-y-2 bg-gray-200  text-left p-4 mx-8 rounded-md sm:bg-gray-100 sm:mx-0">
+          <h4 class="text-gray-800 font-semibold">
+            Information
+            <button type="button" class="toggler sm:hidden">
+              <i class="ri-arrow-down-double-line"></i>
+            </button>
           </h4>
           <div class="dropdown hidden sm:flex flex-col transition-all duration-300 ease-in-out">
             <a href="#" class="text-gray-600 hover:text-gray-800">Track Your Order</a>
@@ -42,9 +54,12 @@
             <a href="#" class="text-gray-600 hover:text-gray-800">Careers</a>
           </div>
         </div>
-        <div class="flex flex-col space-y-2 bg-gray-200 sm:bg-white text-left p-4 mx-8 rounded-md">
-          <h4 class="text-gray-800 font-semibold">My Account
-            <button type="button" class="toggler sm:hidden"><i class="ri-arrow-down-double-line"></i></button>
+        <div class="flex flex-col space-y-2 bg-gray-200  text-left p-4 mx-8 rounded-md  sm:bg-gray-100 sm:mx-0">
+          <h4 class="text-gray-800 font-semibold">
+            My Account
+            <button type="button" class="toggler sm:hidden">
+              <i class="ri-arrow-down-double-line"></i>
+            </button>
           </h4>
           <div class="dropdown hidden sm:flex flex-col transition-all duration-300 ease-in-out">
             <a href="#" class="text-gray-600 hover:text-gray-800">Cart</a>
@@ -53,9 +68,12 @@
             <a href="#" class="text-gray-600 hover:text-gray-800">Payment Options</a>
           </div>
         </div>
-        <div class="flex flex-col space-y-2 bg-gray-200 sm:bg-white text-left p-4 mx-8 rounded-md">
-          <h4 class="text-gray-800 font-semibold">Services
-            <button type="button" class="toggler sm:hidden"><i class="ri-arrow-down-double-line"></i></button>
+        <div class="flex flex-col space-y-2 bg-gray-200  text-left p-4 mx-8 rounded-md  sm:bg-gray-100 sm:mx-0">
+          <h4 class="text-gray-800 font-semibold">
+            Services
+            <button type="button" class="toggler sm:hidden">
+              <i class="ri-arrow-down-double-line"></i>
+            </button>
           </h4>
           <div class="dropdown hidden sm:flex flex-col transition-all duration-300 ease-in-out">
             <a href="#" class="text-gray-600 hover:text-gray-800">About Us</a>
@@ -63,9 +81,12 @@
             <a href="#" class="text-gray-600 hover:text-gray-800">Robu B2B</a>
           </div>
         </div>
-        <div class="flex flex-col space-y-2 bg-gray-200 sm:bg-white text-left p-4 mx-8 rounded-md">
-          <h4 class="text-gray-800 font-semibold">Policies
-            <button type="button" class="toggler sm:hidden"><i class="ri-arrow-down-double-line"></i></button>
+        <div class="flex flex-col space-y-2  bg-gray-200 text-left p-4 mx-8 rounded-md  sm:bg-gray-100 sm:mx-0">
+          <h4 class="text-gray-800 font-semibold">
+            Policies
+            <button type="button" class="toggler sm:hidden">
+              <i class="ri-arrow-down-double-line"></i>
+            </button>
           </h4>
           <div class="dropdown hidden sm:flex flex-col transition-all duration-300 ease-in-out">
             <a href="#" class="text-gray-600 hover:text-gray-800">Investor Relations</a>
@@ -76,14 +97,18 @@
             <a href="#" class="text-gray-600 hover:text-gray-800">E-Waste Collection</a>
           </div>
         </div>
-        <div class="flex flex-col items-center sm:items-start space-y-2">
+        <div class="flex flex-col items-center  space-y-2 sm:items-start md:p-4">
           <h4 class="text-gray-800 font-semibold">Download Our App</h4>
           <div class="flex items-center sm:block">
             <a href="#">
-              <img src="{% static 'images/Google-Play-Badge.webp' %}" alt="Google Play" class="w-32">
+              <img src="{% static 'images/Google-Play-Badge.webp' %}"
+                   alt="Google Play"
+                   class="w-32">
             </a>
             <a href="#">
-              <img src="{% static 'images/app-store-1-e1520501287217.webp' %}" alt="App Store" class="w-32">
+              <img src="{% static 'images/app-store-1-e1520501287217.webp' %}"
+                   alt="App Store"
+                   class="w-32">
             </a>
           </div>
         </div>
@@ -94,13 +119,12 @@
     <p class="text-gray-600">© Robu.in is registered trademark of MACFOS LIMITED - All Rights Reserved</p>
   </div>
 </footer>
-
 <script>
-  document.querySelectorAll('.toggler').forEach(button => {
-    button.addEventListener('click', () => {
-      const dropdown = button.parentElement.nextElementSibling;
-      dropdown.classList.toggle('hidden');
-      dropdown.classList.toggle('flex');
+    document.querySelectorAll('.toggler').forEach(button => {
+        button.addEventListener('click', () => {
+            const dropdown = button.parentElement.nextElementSibling;
+            dropdown.classList.toggle('hidden');
+            dropdown.classList.toggle('flex');
+        });
     });
-  });
 </script>
